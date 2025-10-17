@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const contenedor = document.getElementById('carrito');
   const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
+  document.getElementById("contCarrito").textContent = `Carrito (${carrito.length})`; //Introduzco entre los paréntesis el contador de productos del carrito.
+
   if (carrito.length === 0) {
     contenedor.innerHTML = '<div class="alert alert-info text-center">No hay productos en el carrito.</div>';
   } else {
@@ -28,3 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.location.reload();
   });
 });
+
+
+
+
